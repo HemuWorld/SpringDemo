@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Setter Methods-->
+    <!--  1. Primitive Type-->
+    <bean class="com.hemuworld.springdemo.Student" name="student1">
+    	<!--  Using Value -->
+		<property name="studentId">
+			<value>1</value>
+		</property>
+		<property name="studentName">
+			<value>Hemu</value>
+		</property>
+		<property name="studentAddress">
+			<value>Benguluru</value>
+		</property>
+    </bean>
+    <bean class="com.hemuworld.springdemo.Student" name="student2">
+     	<!--  Value as attribute-->
+		<property name="studentId" value="2" />
+		<property name="studentName" value="Aman"/>
+		<property name="studentAddress" value="Delhi"/>
+    </bean>
+ 	<!--  Using p as schema (http://www.springframework.org/schema/p)-->
+    <bean class="com.hemuworld.springdemo.Student" name="student3" 
+    	p:studentId="3" p:studentName="Rohit" p:studentAddress="Kerla"/>
+    	
+    <!--  1. Collection Type-->
+    
+    
+</beans>

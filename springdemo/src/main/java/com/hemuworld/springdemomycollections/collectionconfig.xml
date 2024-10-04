@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Setter Methods-->
+    <!--  2. Collection Type-->
+    <bean class="com.hemuworld.springdemomycollections.Employee" name="employee1">
+		<property name="name" value="Hitesh" />
+		<property name="phone"> 
+			<list>
+				<value>324242</value>
+				<value>24234</value>
+				<value>4242</value>
+				<null/>
+			</list>
+		</property>
+		<property name="address">
+			<set>
+				<value>Delhi</value>
+				<value>Banglore</value>
+				<value>Mumbai</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="4 years"></entry>
+				<entry key="c" value=".5 years"></entry>
+				<entry key="python" value="1 years"></entry>
+			</map>
+		</property>
+    </bean>
+ 
+</beans>
